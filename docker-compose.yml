@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  recoll-webui:
+    image:  ageos/recoll-webui
+    container_name: ageos_recoll-webui 
+    volumes:  
+      - ./dbdata:/root/.recoll/xapiandb
+      - ./recoll.conf:/root/.recoll/recoll.conf
+      - ./data:/data
+    ports: 
+      - '8080:8080'      
+
+      

@@ -1,0 +1,5 @@
+docker build -t ageos/recoll-webui:2 .
+
+winpty docker run --name recoll-webui --rm  -p 8080:8080 -it ageos/recoll-webui
+
+winpty docker exec -it ageos_recoll-webui //bin//bash
