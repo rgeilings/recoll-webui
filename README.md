@@ -11,7 +11,7 @@ recoll with webui in a docker container
 # links
 
 - source project: https://github.com/rgeilings/recoll-webui
-- docker hub: https://github.com/rgeilings/recoll-webui
+- docker hub: https://hub.docker.com/r/ageos/recoll-webui
 # installation steps
 
 - in docker start the wizard to create a docker container from this image: mount <your documents folder> to `/data` set up port mapping (defaults do also work)
