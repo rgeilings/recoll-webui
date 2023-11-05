@@ -10,10 +10,10 @@ recoll with webui in a docker container
 - the path of what will be indexed is `/docs`
 # links
 
-- source project: https://github.com/amsaravi/docker-recoll-webui
-- docker hub: https://hub.docker.com/repository/docker/amsaravi/recoll-web-ui
+- source project: [https://github.com/amsaravi/docker-recoll-webui](https://github.com/rgeilings/recoll-webui)
+- docker hub: [https://hub.docker.com/repository/docker/amsaravi/recoll-web-ui](https://github.com/rgeilings/recoll-webui)
 # installation steps
 
-- in docker start the wizard to create a docker container from this image: mount <your documents folder> to `/docs` set up port mapping (defaults do also work)
+- in docker start the wizard to create a docker container from this image: mount <your documents folder> to `/data` set up port mapping (defaults do also work)
 - for simplicity there is no user level configuration. you can maintain your container and change configs in `/root/.recoll/recoll.conf` and use docker exec command (not run command) to rebuild index
 - to run the indexer as a time-based task on a synology nas download `recollindex.sh` https://github.com/amsaravi/docker-recoll-webui/blob/local_gpg/recollindex.sh, place it somewhere on your system, make it executable (in a shell run: `chmod 775 recollindex.sh`) and remember to modify `CONTAINER_ID`
