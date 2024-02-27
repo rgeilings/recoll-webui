@@ -14,6 +14,5 @@ recoll with webui in a docker container
 - docker hub: https://hub.docker.com/r/ageos/recoll-webui
 # installation steps
 
-- in docker start the wizard to create a docker container from this image: mount <your documents folder> to `/data` set up port mapping (defaults do also work)
-- for simplicity there is no user level configuration. you can maintain your container and change configs in `/root/.recoll/recoll.conf` and use docker exec command (not run command) to rebuild index
-- to run the indexer as a time-based task on a synology nas download `recollindex.sh`, place it somewhere on your system, make it executable (in a shell run: `chmod 775 recollindex.sh`) and remember to modify `CONTAINER_ID`
+- use the `docker-compose up -d` command to create the docker container. Make sure you do this in the directory where the `docker-compose.yml` file is located.
+- for simplicity there is no user level configuration. you can maintain your container and change configs in `/root/.recoll/recoll.conf` and use `docker exec CONTAINER_ID recollindex` to rebuild index
